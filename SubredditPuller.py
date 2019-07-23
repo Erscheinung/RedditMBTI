@@ -1,6 +1,3 @@
-from typing import List
-
-import praw
 from praw import Reddit
 
 
@@ -18,7 +15,7 @@ class SubredditPuller:
         # Set out account only able to view posts
         self.reddit.read_only = True
 
-    def pull_subreddit(self, subreddit, limit) -> List:
+    def pull_subreddit(self, subreddit, limit):
         """ Pull limit number of posts from specified subreddit. If limit==None,
         it'll try to pull the maximum possible posts """
 
